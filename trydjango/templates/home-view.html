@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+<!--Don't forget the double curly brackets cus uske bina wo render to string nahi chalega. -->
+<!--Basically kya hai jo bhi aap percenatage block ke andar likh rahe ho wo base mai jaake attach ho jaata hai.-->
+
+{% block content %}
+<h1>Title is {{title}} and its content is {{content}}.</h1>
+<p>(id : {{id}})</p>
+<ul>{% for x in my_list %}
+      <a href="articles/{{x.id}}">
+        <li>{{x.title}} and content is {{x.content}}</li>
+      </a>
+    {% endfor %}
+</ul>
+{% endblock content %}

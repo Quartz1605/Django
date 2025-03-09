@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+<!--Don't forget the % signs in the end and at the beginning.-->
+    <div style="display: flex;column-gap: 25px;">
+      <h1>Hello World</h1>
+      <a style="margin-top: 29px;font-size: 20px;" href="articles/create">Click here to create a Article</a>
+    </div>
+    <form action="/articles/">
+      <input type="text" name="q"/>
+      <input type="submit" />
+    </form>
+
+    
+    
+    {% block content %}
+    <h3>This will be replaced.</h3>
+    {% endblock content %}
+
+  </body>
+</html>
